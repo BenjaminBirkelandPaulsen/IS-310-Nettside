@@ -12,10 +12,12 @@ fetch("navbar.html")
     const nav = container.querySelector("nav");
     const toggle = container.querySelector(".nav-toggle");
 
-    toggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", isOpen);
-    });
+    if (nav && toggle) {
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    }
 
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
