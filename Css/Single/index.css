@@ -44,6 +44,10 @@ body{
   object-fit: cover;
 }
 
+main {
+  padding-top: 80px;
+}
+
 .kort-informasjon {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
