@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gruppe 19 - Om Oss</title>
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="./Css/Single/om-oss.css">
+    <link rel="stylesheet" href="./Css/Shared/navbar.css" />
 </head>
 <body>
-
-    <header>
-        <h1>Gruppe 19</h1>
-    </header>
+    <div data-navbar></div>
 
     <div class="page-wrapper" id="pageWrapper">
         <!-- Sirkelmeny -->
@@ -20,27 +18,27 @@
                 <p>IS-310</p>
             </div>
 
-            <div class="member-node node-1" id="node-hina" onclick="openMember('hina')">
+            <div class="member-node node-1" id="node-hina" data-member="hina">
                 <img src="./Bilder/Members/Hina.png" alt="Hina Gul" class="avatar" />
                 <span>Hina</span>
             </div>
 
-            <div class="member-node node-2" id="node-tam" onclick="openMember('tam')">
+            <div class="member-node node-2" id="node-tam" data-member="tam">
                 <img src="./Bilder/Members/Tam.png" alt="Tam Nguyen" class="avatar" />
                 <span>Tam</span>
             </div>
 
-            <div class="member-node node-3" id="node-benjamin" onclick="openMember('benjamin')">
+            <div class="member-node node-3" id="node-benjamin" data-member="benjamin">
                 <img src="./Bilder/Members/Benjamin.png" alt="Benjamin Hansen" class="avatar" />
                 <span>Benjamin</span>
             </div>
 
-            <div class="member-node node-4" id="node-aisha" onclick="openMember('aisha')">
+            <div class="member-node node-4" id="node-aisha" data-member="aisha">
                 <img src="./Bilder/Members/Aisha.png" alt="Aisha Rafi" class="avatar" />
                 <span>Aisha</span>
             </div>
 
-            <div class="member-node node-5" id="node-jankaare" onclick="openMember('jankaare')">
+            <div class="member-node node-5" id="node-jankaare" data-member="jankaare">
                 <img src="./Bilder/Members/JanKaare.png" alt="Jan Kåre Treldal" class="avatar" />
                 <span>Jan Kåre</span>
             </div>
@@ -202,6 +200,7 @@
         </div>
     </div>
 
-    <script src="JS/script.js"></script>
+    <script src="./JS/scrolling-om-oss.js"></script>
+    <script src="./JS/navbar.js"></script>
 </body>
 </html>

@@ -11,7 +11,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
+    overscroll-behavior: none;
 }
 
 header {
@@ -35,6 +36,8 @@ header h1 {
     justify-content: center;
     align-items: center;
     position: relative;
+    min-height: 100vh;
+    height: 100vh;
     padding: 40px 40px;
     max-width: 1600px;
     margin: 0 auto;
@@ -172,6 +175,18 @@ header h1 {
 
 .profile-content {
     width: 100%;
+    animation: profileFade 0.35s ease;
+}
+
+@keyframes profileFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close-btn {
