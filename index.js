@@ -1,36 +1,119 @@
-const revealItems = [...document.querySelectorAll('.reveal')];
+document.addEventListener("DOMContentLoaded", () => {
 
-function updateRevealState() {
-  const viewportHeight = window.innerHeight;
+  /* VANLIG REVEAL */
 
-  revealItems.forEach((item, index) => {
-    const rect = item.getBoundingClientRect();
-    const isVisible = rect.top < viewportHeight * 0.9 && rect.bottom > 0;
+  const revealElements = document.querySelectorAll(".reveal");
 
-    item.classList.toggle('visible', isVisible || index < 2);
-    item.style.transitionDelay = `${index * 110}ms`;
-
-    if (isVisible || index < 2) {
-      item.style.opacity = '1';
-      item.style.transform = 'translate3d(0, 0, 0) scale(1)';
-      item.style.clipPath = 'inset(0 0 0 0 round 30px)';
-    } else {
-      item.style.opacity = '0';
-      item.style.transform = `translate3d(${getComputedStyle(item).getPropertyValue('--move-x') || '0px'}, 80px, 0) scale(0.94)`;
-      item.style.clipPath = 'inset(0 0 100% 0 round 30px)';
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.15
     }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
   });
-}
 
-function initRevealAnimations() {
-  if (!revealItems.length) return;
-  updateRevealState();
-  window.addEventListener('scroll', updateRevealState, { passive: true });
-  window.addEventListener('resize', updateRevealState);
-}
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initRevealAnimations);
-} else {
-  initRevealAnimations();
-}
+  /* HORIZONTAL SCROLL */
+
+  const section = document.querySelector(".horizontal-team");
+  const track = document.querySelector(".horizontal-team-track");
+
+  if (!section || !track) {
+    return;
+  }
+
+
+  function updateHorizontalScroll() {
+
+    /* På mobil bruker vi vanlig vertikal side */
+
+    if (window.innerWidth <= 800) {
+      track.style.transform = "none";
+      return;
+    }
+
+
+    const rect = section.getBoundingClientRect();
+
+    const sectionHeight =
+      section.offsetHeight - window.innerHeight;
+
+
+    /*
+      Hvor langt vi har scrollet gjennom medlemsdelen
+      0 = starten
+      1 = slutten
+    */
+
+    let progress =
+      -rect.top / sectionHeight;
+
+
+    progress = Math.max(
+      0,
+      Math.min(1, progress)
+    );
+
+
+    /*
+      Hvor langt rekken kan flyttes horisontalt
+    */
+
+    const maxTranslate =
+      track.scrollWidth - window.innerWidth;
+
+
+    const translateX =
+      progress * maxTranslate;
+
+
+    track.style.transform =
+      `translate3d(-${translateX}px, 0, 0)`;
+  }
+
+
+  let ticking = false;
+
+
+  function requestUpdate() {
+
+    if (!ticking) {
+
+      requestAnimationFrame(() => {
+
+        updateHorizontalScroll();
+
+        ticking = false;
+
+      });
+
+      ticking = true;
+    }
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    requestUpdate,
+    { passive: true }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    requestUpdate
+  );
+
+
+  updateHorizontalScroll();
+
+});
