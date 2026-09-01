@@ -47,59 +47,126 @@ body{
 main {
   padding-top: 80px;
 }
-
-.kort-informasjon {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  width: 90%;
-  margin: 30px auto;
+/* Karusell */
+.team-section {
+  width: min(90%);
+  margin: 60px auto 40px;
 }
 
-.kort-lenke {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.kort {
-  width: 100%;
-  min-height: 180px;
-  padding: 20px;
-  background-color: white;
-  border: 2px solid #dbe3f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
-
-.kort-lenke:nth-child(1),
-.kort-lenke:nth-child(2),
-.kort-lenke:nth-child(3),
-.kort-lenke:nth-child(4),
-.kort-lenke:nth-child(5) {
-  grid-column: span 2;
-}
-
-.kort-lenke:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.kort-lenke:nth-child(5) {
-  grid-column: 4 / span 2;
-}
-.members {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px;
-}
-.kort-overskrift {
+.team-header {
   text-align: center;
-  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.team-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  color: #4d5d7c;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+.team-header h2 {
+  margin: 0;
   font-size: 2rem;
+}
+
+.team-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.team-track {
+  display: flex;
+  width: max-content;
+  gap: 22px;
+  will-change: transform;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 430px;
+  width: min(220px, 32vw);
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(23, 44, 74, 0.08);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.members {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: #eaf0fb;
+}
+
+.team-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 18px 16px;
+  text-align: left;
+}
+
+.team-card__content h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.team-card__content p {
+  margin: 0;
+  color: #4d5d7c;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill-list span {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #1e3a5d;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.social-links a {
+  flex: 1;
+  text-align: center;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: #123b66;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  background: #0f2f52;
 }
 
 .kort-gruppe-info {
@@ -111,7 +178,7 @@ main {
 }
 
 .kort-info {
-    text-align: left;
+  text-align: left;
   padding: 20px;
   background-color: white;
   border: 2px solid #dbe3f0;
@@ -119,18 +186,13 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
-@media (max-width: 600px) {
-  .kort-informasjon {
-    grid-template-columns: 1fr;
+
+@media (max-width: 1000px) {
+  .team-card {
+    width: min(260px, 42vw);
   }
 
-  .kort-lenke:nth-child(1),
-  .kort-lenke:nth-child(2),
-  .kort-lenke:nth-child(3),
-  .kort-lenke:nth-child(4),
-  .kort-lenke:nth-child(5) {
-    grid-column: 1;
-  }
+
   .kort-gruppe-info {
     grid-template-columns: 1fr;
   }
