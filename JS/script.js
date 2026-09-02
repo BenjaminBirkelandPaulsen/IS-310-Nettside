@@ -1,9 +1,10 @@
 function openMember(id) {
     // 1. Krymp sirkelen og flytt den til venstre
     document.getElementById('pageWrapper').classList.add('active-profile');
-    
+
     // 2. Oppdater aktiv markering på noder
     document.querySelectorAll('.member-node').forEach(node => node.classList.remove('active'));
+    document.querySelectorAll('.center-hub').forEach(node => node.classList.remove('active'));
     const activeNode = document.getElementById('node-' + id);
     if (activeNode) activeNode.classList.add('active');
 
@@ -23,4 +24,5 @@ function closeProfile() {
     // Tilbakestill sirkel til sentrum og skjul markeringer
     document.getElementById('pageWrapper').classList.remove('active-profile');
     document.querySelectorAll('.member-node').forEach(node => node.classList.remove('active'));
+    document.querySelectorAll('.center-hub').forEach(node => node.classList.remove('active'));
 }

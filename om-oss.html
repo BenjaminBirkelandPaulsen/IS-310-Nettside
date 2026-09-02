@@ -9,16 +9,18 @@
 <body>
 
     <header>
-        <h1>Gruppe 19</h1>
+        <h1>Godt og blandet</h1>
     </header>
 
     <div class="page-wrapper" id="pageWrapper">
         <!-- Sirkelmeny -->
         <div class="circle-container">
-            <div class="center-hub">
-                <h2>Gruppe 19</h2>
-                <p>IS-310</p>
-            </div>
+            <button class="center-hub" id="node-gruppe19" onclick="openMember('gruppe19')">
+                <span class="vi-er-text">Vi er:</span>
+                <span class="godt-og-text">Godt og</span>
+                <span class="blandet-text">blandet</span>
+                <span class="hub-course">IS-310</span>
+            </button>
 
             <div class="member-node node-1" id="node-hina" onclick="openMember('hina')">
                 <img src="./Bilder/Members/Hina.png" alt="Hina Gul" class="avatar" />
@@ -50,16 +52,27 @@
         <div class="profile-card" id="profileCard">
             <button class="close-btn" onclick="closeProfile()">&times;</button>
 
+            <div class="profile-content" id="profile-gruppe19" style="display: none;">
+                <div class="group-intro">
+                    <h3>Vi er – "Godt og blandet"</h3><br>
+                </div>
+                <div class="card-body">
+                    <p>Vi er en sammensatt gjeng med sprik i alder, etnisk bakgrunn og livserfaringer. Akkurat som en godtepose har vi noe for enhver smak, og sammen skaper vi en helhet som er mer enn summen av delene.</p>
+                    <p>Alle har et unikt sett med ferdigheter. Fordi vi går samme studium, har vi en sterk overlappende kompetanse som grunnlag (f.eks. innen frontend-utvikling), noe som gir oss felles forståelse og fleksibilitet. Samtidig er vi individuelt spisset fordi hver enkelt av oss har sin egen spisskompetanse (f.eks. backend, databasesystemer eller brukeropplevelse) som komplementerer teamet og gjør oss til en helhetlig enhet.</p>
+                    <p>Dette mangfoldet av erfaringer og tekniske ferdigheter gjør oss til et team som utfyller hverandre godt og kan løse komplekse oppgaver på tvers av fagområder.</p>
+                </div>
+            </div>
+
             <!-- Jan Kåre sin profil -->
             <div class="profile-content" id="profile-jankaare" style="display: none;">
                 <div class="card-header">
                     <img src="./Bilder/Members/JanKaare.png" alt="Jan Kåre Treldal" class="avatar-circle" />
                     <div class="header-info">
                         <h3>Jan Kåre Treldal</h3>
-                        <p>Student – IT og kommunikasjonssystemer</p>
+                        <p>Student – IT og kommunikasjonssystemer (44 år)</p>
                         <div class="social-links">
-                            <a href="https://github.com" target="_blank"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="social-icon" /></a>
-                            <a href="https://linkedin.com" target="_blank"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="social-icon" /></a>
+                            <a href="https://github.com/Janke82" target="_blank"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="social-icon" /></a>
+                            <a href="https://www.linkedin.com/in/jan-k%C3%A5re-treldal-16b581390/" target="_blank"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="social-icon" /></a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +160,7 @@
                     <img src="./Bilder/Members/Benjamin.png" alt="Benjamin Birkeland Paulsen" class="avatar-circle" />
                     <div class="header-info">
                         <h3>Benjamin Birkeland Paulsen</h3>
-                        <p>Student – IT og kommunikasjonssystemer</p>
+                        <p>Student – IT og kommunikasjonssystemer (20 år)</p>
                         <div class="social-links">
                             <a href="https://github.com" target="_blank"><img src="./Bilder/Icon/github-icon.png" alt="GitHub Icon til Benjamin" class="social-icon" /></a>
                             <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn Icon til Benjamin" class="social-icon" /></a>
@@ -156,15 +169,16 @@
                 </div>
                 <div class="card-body">
                     <div>
-                        <p>Skriv teksten din her...</p>
+                        <p>Hei! Mitt navn er Benjamin, jeg er 20 år gammel, født og oppvokst i Kristiansand. Jeg har holdt på med IT-relaterte fag i 7 år og trives godt med det. Mine interesser er teknologi, historie og sport.</p>
+                        <p>Mitt mål med bachelorprosjektet er å skape en velfungerende applikasjon, samt utvikle meg som person slik at jeg er bedre egnet for yrkeslivet.</p>
                     </div>
                     <div class="competence-wrapper">
                         <div class="competence-title">Relevante IT-kompetanseområder:</div>
                         <ul class="competence-list">
-                            <li><strong>Frontend-utvikling:</strong> Legg til teknologier...</li>
-                            <li><strong>Backend-utvikling:</strong> Legg til teknologier...</li>
-                            <li><strong>Database-utvikling:</strong> Legg til teknologier...</li>
-                            <li><strong>Utviklerverktøy:</strong> Legg til verktøy...</li>
+                            <li><strong>Frontend-utvikling:</strong> HTML, CSS og litt JavaScript</li>
+                            <li><strong>Backend-utvikling:</strong> C# og Python</li>
+                            <li><strong>Database-utvikling:</strong> SQL og PL/pgSQL</li>
+                            <li><strong>Utviklerverktøy:</strong> AI, Docker og GitHub</li>
                         </ul>
                     </div>
                 </div>
@@ -179,13 +193,14 @@
                         <p>Student – UX/UI & Frontend-utvikling</p>
                         <div class="social-links">
                             <a href="https://github.com/aisha-ra" target="_blank"><img src="./Bilder/Icon/github-icon.png" alt="GitHub-profil til Aisha" class="social-icon" /></a>
+                            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn Icon til Benjamin" class="social-icon" /></a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div>
                         <p>Jeg studerer IT og informasjonssystemer og er spesielt interessert i design, brukeropplevelse og utvikling av brukervennlige digitale løsninger. Jeg liker å jobbe med hvordan nettsider og applikasjoner ser ut, hvordan de er bygget opp, og hvordan brukeren opplever løsningen.</p>
-                        <p>Gjennom studiet og egne prosjekter har jeg jobbet med både design og utvikling av digitale løsninger. Jeg ønsker å videreutvikle ferdighetene mine innen UX/UI-design, frontend-utvikling og design av moderne og intuitive brukergrensesnitt.</p>
+                        <p>Gjennom studiet og egne prosjekter har jeg jobbed med både design og utvikling av digitale løsninger. Jeg ønsker å videreutvikle ferdighetene mine innen UX/UI-design, frontend-utvikling og design av moderne og intuitive brukergrensesnitt.</p>
                     </div>
                     <div class="competence-wrapper">
                         <div class="competence-title">Relevante IT-kompetanseområder:</div>

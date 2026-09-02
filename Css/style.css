@@ -67,8 +67,8 @@ header h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     background: #ffffff;
     border: 3px solid #0284c7;
@@ -78,66 +78,125 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 0.08em;
     z-index: 2;
-}
-
-.center-hub h2 {
-    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
     color: #0f172a;
+    font: inherit;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.center-hub p {
-    font-size: 0.9rem;
+.center-hub:hover,
+.center-hub:focus-visible {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 12px rgba(2, 132, 199, 0.18), 0 14px 24px rgba(2, 132, 199, 0.14);
+    outline: none;
+}
+
+.center-hub.active {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 12px rgba(2, 132, 199, 0.25), 0 14px 30px rgba(2, 132, 199, 0.18);
+}
+
+.godt-og-text,
+.blandet-text {
+    margin: 0;
+    font-size: 2.16rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.1;
+    text-align: center;
+    width: auto;
+}
+
+.vi-er-text {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.2;
+    text-align: center;
+    width: auto;
+    letter-spacing: 0.02em;
+}
+
+.hub-course {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: #64748b;
+    margin-top: 2px;
 }
 
-/* Medlemsnode – helt statisk */
+/* Medlemsnode – samlet beholder */
 .member-node {
     position: absolute;
-    width: 180px;
+    width: 234px;
+    height: 234px;
     text-align: center;
     cursor: pointer;
     z-index: 3;
 }
 
+/* Avatar-bilde med fet gullramme */
 .avatar {
-    width: 180px;
-    height: 180px;
+    width: 234px;
+    height: 234px;
     border-radius: 50%;
     object-fit: cover;
     background-color: #ffffff;
-    border: 4px solid #cbd5e1;
-    margin: 0 auto 8px auto;
+    border: 5px solid #d4af37; /* Fet gullfarget ramme */
     display: block;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 0 12px rgba(212, 175, 55, 0.35); /* Myk gullglød */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 12px rgba(212, 175, 55, 0.18), 0 0 0 24px rgba(212, 175, 55, 0.1), 0 20px 32px rgba(212, 175, 55, 0.28);
 }
 
 .member-node.active .avatar {
-    border-color: #0284c7;
-    box-shadow: 0 0 0 6px rgba(2, 132, 199, 0.25);
+    border-color: #b8860b; /* Dypere gulltone ved aktiv tilstand */
+    box-shadow: 0 0 0 14px rgba(212, 175, 55, 0.3), 0 0 0 28px rgba(212, 175, 55, 0.18), 0 20px 34px rgba(212, 175, 55, 0.22);
 }
 
+/* Navn overlappende på nedre del av sirkelbildet */
 .member-node span {
-    font-size: 1.05rem;
-    color: #475569;
-    font-weight: 600;
-    display: block;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 700;
+    pointer-events: none; /* Sikrer at klikk går gjennom til sirkelen */
+    z-index: 4;
+    text-transform: capitalize;
+    /* Tydelig sort kontur rundt hvit tekst */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+         0px  2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .member-node.active span {
-    color: #0284c7;
-    font-weight: 700;
+    color: #ffd700; /* Ekstra varm hvit/gulltone ved aktiv tilstand */
 }
 
-/* Posisjonering i sirkel */
-.node-1 { top: -6%;  left: 50%; transform: translate(-50%, 0); }
-.node-2 { top: 25%;  left: 96%; transform: translate(-50%, 0); }
-.node-3 { top: 76%;  left: 79%; transform: translate(-50%, 0); }
-.node-4 { top: 76%;  left: 21%; transform: translate(-50%, 0); }
-.node-5 { top: 25%;  left: 4%;  transform: translate(-50%, 0); }
+/* Symmetrisk, matematisk plassering (radius = 38% fra sentrum (50%, 50%), vinkler med 72° intervall) */
+.node-1 { top: 12%;    left: 50%;    transform: translate(-50%, -50%); } /* Topp (0°) */
+.node-2 { top: 38.2%;  left: 86.1%;  transform: translate(-50%, -50%); } /* Høyre oppe (72°) */
+.node-3 { top: 80.7%;  left: 72.3%;  transform: translate(-50%, -50%); } /* Høyre nede (144°) */
+.node-4 { top: 80.7%;  left: 27.7%;  transform: translate(-50%, -50%); } /* Venstre nede (216°) */
+.node-5 { top: 38.2%;  left: 13.9%;  transform: translate(-50%, -50%); } /* Venstre oppe (288°) */
 
-/* Profilkort – nullstilt i lukket tilstand (ingen rammer eller skygger når det er skjult) */
+/* Profilkort – nullstilt i lukket tilstand */
 .profile-card {
     width: 0;
     max-width: 0;
@@ -157,7 +216,7 @@ header h1 {
     white-space: normal;
 }
 
-/* Aktiv tilstand for profilkort (enkel ren ramme uten dobbeltkant) */
+/* Aktiv tilstand for profilkort (fet gullfarget ramme) */
 .page-wrapper.active-profile .profile-card {
     width: 850px;
     max-width: 900px;
@@ -165,8 +224,8 @@ header h1 {
     max-height: 80vh;
     opacity: 1;
     padding: 36px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 4px solid #d4af37; /* Fet gullfarget ramme */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 20px rgba(212, 175, 55, 0.2);
     overflow-y: auto;
 }
 
@@ -200,12 +259,13 @@ header h1 {
     border-bottom: 1px solid #f1f5f9;
 }
 
+/* Liten sirkel i profilkortet med blå ramme */
 .avatar-circle {
     width: 75px;
     height: 75px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #0284c7;
+    border: 3px solid #0284c7; /* Blå ramme */
     flex-shrink: 0;
 }
 
@@ -255,6 +315,20 @@ header h1 {
     grid-template-columns: 1.25fr 1fr;
     gap: 32px;
     align-items: start;
+}
+
+#profile-gruppe19 .card-body {
+    grid-template-columns: 1fr 1fr;
+}
+
+#profile-gruppe19 .card-body p:nth-child(1),
+#profile-gruppe19 .card-body p:nth-child(2) {
+    margin-bottom: 0;
+}
+
+#profile-gruppe19 .card-body p:last-child {
+    grid-column: 1 / -1;
+    margin-top: 0;
 }
 
 .card-body p {
