@@ -3,9 +3,13 @@ function openMember(id) {
     document.getElementById('pageWrapper').classList.add('active-profile');
 
     // 2. Oppdater aktiv markering på noder
+    const activeNode = document.getElementById('node-' + id);
+    if (activeNode && activeNode.classList.contains('active')) {
+        closeProfile();
+        return;
+    }
     document.querySelectorAll('.member-node').forEach(node => node.classList.remove('active'));
     document.querySelectorAll('.center-hub').forEach(node => node.classList.remove('active'));
-    const activeNode = document.getElementById('node-' + id);
     if (activeNode) activeNode.classList.add('active');
 
     // 3. Skjul alle profilinnhold-seksjoner
