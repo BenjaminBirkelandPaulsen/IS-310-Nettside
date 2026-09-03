@@ -2,6 +2,7 @@ body{
     text-align: center;
     max-width: auto;
 	margin: 0 auto;
+   font-family: Arial, sans-serif;
 }
 .gruppe-hero {
   position: relative;
@@ -28,6 +29,29 @@ body{
   text-shadow: 0 2px 5px black;
 }
 
+.gruppe-tekst {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+
+  max-width: 600px;
+
+  color: white;
+  text-align: left;
+  text-shadow: 0 2px 5px black;
+
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.gruppe-tekst.hero-hidden {
+  opacity: 0;
+}
+
+.gruppe-tekst.hero-visible {
+  opacity: 1;
+}
 .gruppe-tekst h1 {
   margin: 0;
   font-size: 3rem;
@@ -1141,4 +1165,24 @@ main {
 
     font-size: 45vw;
   }
+}
+
+/* Foonter (Kontakt person)*/
+.footer {
+    padding: 60px 30px;
+    background: #f4f7fb;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  
+}
+
+.copyright {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.899);
+  color: #5f6061;
+  font-size: 0.9rem;
 }
