@@ -137,9 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
       Hvor langt rekken kan flyttes horisontalt
     */
 
-    const maxTranslate =
-      track.scrollWidth - window.innerWidth;
+    const members =
+  track.querySelectorAll(".horizontal-member");
 
+const memberWidth =
+  members[0].getBoundingClientRect().width;
+
+const maxTranslate =
+  (members.length - 1) * memberWidth;
 
     const translateX =
       progress * maxTranslate;
