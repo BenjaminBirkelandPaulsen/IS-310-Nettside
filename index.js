@@ -177,7 +177,75 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* ========================================
+   HERO TEKST LOOP
+======================================== */
 
+const heroText = document.querySelector(".gruppe-tekst");
+const heroEyebrow = document.querySelector("#hero-eyebrow");
+const heroTitle = document.querySelector("#hero-title");
+const heroDescription = document.querySelector("#hero-description");
+
+const heroSlides = [
+  {
+    eyebrow: "IS-310 Prosjektgjennomføring",
+    title: "Gruppe 19",
+    description:
+      "Vi er fem studenter som samarbeider om prosjektet i IS-310."
+  },
+
+  {
+    eyebrow: "Vår ambisjon",
+    title: "Vi bygger noe sammen",
+    description:
+      "Vi ønsker å skape den beste mulige løsningen gjennom samarbeid, læring og våre ulike ferdigheter innen IT."
+  }
+];
+
+let heroIndex = 0;
+
+if (
+  heroText &&
+  heroEyebrow &&
+  heroTitle &&
+  heroDescription
+) {
+
+  heroText.classList.add("hero-visible");
+
+  setInterval(() => {
+
+    /* FADE UT */
+
+    heroText.classList.remove("hero-visible");
+    heroText.classList.add("hero-hidden");
+
+
+    setTimeout(() => {
+
+      /* BYTT TEKST */
+
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+
+      heroEyebrow.textContent =
+        heroSlides[heroIndex].eyebrow;
+
+      heroTitle.textContent =
+        heroSlides[heroIndex].title;
+
+      heroDescription.textContent =
+        heroSlides[heroIndex].description;
+
+
+      /* FADE INN */
+
+      heroText.classList.remove("hero-hidden");
+      heroText.classList.add("hero-visible");
+
+    }, 800);
+
+  }, 5000);
+}
 
 /* MENY */
 
