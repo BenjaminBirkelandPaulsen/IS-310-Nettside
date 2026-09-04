@@ -6,7 +6,32 @@
     <title>IS-310 Nettside</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+<body>
+  <button class="fast-nav-button" id="fastNavButton" aria-label="Åpne navigasjon">
+  ☰
+</button>
+
+<div class="fast-nav-menu" id="fastNavMenu">
+  <a href="#forside">Forside</a>
+  <div class="fast-nav-members">
+    <a href="#medlemmer">Medlemmer</a>
+
+    <div class="fast-nav-submenu">
+      <a href="#" data-member="0">Hina</a>
+      <a href="#" data-member="1">Tam</a>
+      <a href="#" data-member="2">Benjamin</a>
+      <a href="#" data-member="3">Aisha</a>
+      <a href="#" data-member="4">Jan Kåre</a>
+    </div>
+  </div>
+
+    
+  <a href="#om-oss">Om oss</a>
+  <a href="#ambisjoner">Ambisjoner</a>
+  <a href="#kontaktperson">Kontaktperson</a>
+</div>
+
+  
 
     <header class="gruppe-hero" id ="forside">
       <!-- Ligger en tilfeldig bilde nå som forside på nettsiden, men det kan alltids endre før innlevering.-->
@@ -32,16 +57,17 @@
     <a href="#medlemmer">Medlemmer</a>
 
     <div class="quick-submenu">
-      <a href="#hina">Hina</a>
-      <a href="#tam">Tam</a>
-      <a href="#benjamin">Benjamin</a>
-      <a href="#aisha">Aisha</a>
-      <a href="#jankaare">Jan Kåre</a>
+      <a href="#" data-member="0">Hina</a>
+      <a href="#" data-member="1">Tam</a>
+      <a href="#" data-member="2">Benjamin</a>
+      <a href="#" data-member="3">Aisha</a>
+      <a href="#" data-member="4">Jan Kåre</a>
     </div>
   </div>
 
   <a href="#om-oss">Om oss</a>
   <a href="#ambisjoner">Ambisjoner</a>
+  <a href="#kontaktperson">Kontaktperson</a>
 
 </nav>
     </header>
@@ -382,7 +408,7 @@
       </section>
     </main>
     <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-content" id="kontaktperson">
         <h2>Kontaktperson </h2>
         
         <p>Benjamin Birkeland Paulsen </p>

@@ -1196,9 +1196,9 @@ html {
 .quick-nav a {
   display: inline-block;
 
-  padding: 12px 24px;
+  padding: 20px 34px;
 
-  background-color: #123b66;
+  background-color: #cbf6fd5c;
   color: white;
 
   text-decoration: none;
@@ -1214,7 +1214,7 @@ html {
 }
 
 .quick-nav a:hover {
-  background-color: #0f2f52;
+  background-color: #5da0e8;
   transform: translateY(-2px);
 }
 
@@ -1236,21 +1236,25 @@ html {
 
 .quick-members {
   position: relative;
+  display: flex;
+  align-items: center;
+  transition: margin-right 0.3s ease;
 }
 
 .quick-submenu {
   position: absolute;
 
-  /* Menyen skal åpne OPPOVER fordi hovedmenyen
-     ligger nederst på forsidebildet */
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* Åpner til høyre for Medlemmer */
+  left: 100%;
 
-  min-width: 150px;
+  /* Holder hele listen innenfor bildet */
+  bottom: 0;
+  top: auto;
 
+  transform: none;
+
+  min-width: 170px;
   padding: 8px;
-  margin-bottom: 8px;
 
   background-color: white;
   border-radius: 14px;
@@ -1258,6 +1262,7 @@ html {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
 
   display: none;
+  z-index: 100;
 }
 
 /* Vis undermeny når musen er over Medlemmer */
@@ -1269,19 +1274,28 @@ html {
 .quick-submenu a {
   display: block;
 
-  padding: 9px 14px;
+  padding: 10px 16px;
 
-  background: transparent;
+  background-color: transparent;
   color: #172234;
 
   border-radius: 8px;
 
   white-space: nowrap;
+
+  text-align: left;
+
+  font-size: 0.9rem;
+
+  transform: none;
 }
 
 .quick-submenu a:hover {
   background-color: #eef4fb;
   transform: none;
+}
+.quick-members:hover {
+  margin-right: 180px;
 }
 /* Foonter (Kontakt person)*/
 .footer {
@@ -1301,4 +1315,116 @@ html {
   border-top: 1px solid rgba(0, 0, 0, 0.899);
   color: #5f6061;
   font-size: 0.9rem;
+}
+
+.fast-nav-button {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #123b66;
+  color: white;
+
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+.fast-nav-button:hover {
+  background-color: #2f6690;
+}
+
+
+/* MENY SOM ÅPNES */
+
+.fast-nav-menu {
+  position: fixed;
+  right: 25px;
+  top: 90px;
+
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 10px;
+
+  background-color: white;
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
+  z-index: 1000;
+}
+
+.fast-nav-menu.open {
+  display: flex;
+}
+
+.fast-nav-menu a {
+  padding: 10px 18px;
+
+  color: #172234;
+  text-decoration: none;
+
+  border-radius: 8px;
+}
+
+.fast-nav-menu a:hover {
+  background-color: #eef4fb;
+}
+.fast-nav-members {
+  position: relative;
+}
+
+.fast-nav-submenu {
+  display: flex;
+  flex-direction: column;
+
+  /* Lukket */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  margin-left: 10px;
+  padding-left: 8px;
+
+  border-left: 2px solid transparent;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    margin-top 0.35s ease;
+
+  margin-top: 0;
+}
+
+
+/* Når du hover over Medlemmer */
+
+.fast-nav-members:hover .fast-nav-submenu {
+  max-height: 250px;
+  opacity: 1;
+
+  margin-top: 5px;
+
+  border-left-color: #dbe3f0;
+}
+
+
+.fast-nav-submenu a {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+
+  background-color: transparent;
+}
+
+.fast-nav-submenu a:hover {
+  background-color: #eef4fb;
 }

@@ -1,3 +1,14 @@
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
+});
 // const track = document.getElementById('teamTrack');
 
 // if (track) {
@@ -267,3 +278,115 @@ if (menuButton && menuLinks) {
   });
 
 }
+
+const fastNavButton = document.getElementById("fastNavButton");
+const fastNavMenu = document.getElementById("fastNavMenu");
+
+if (fastNavButton && fastNavMenu) {
+
+  fastNavButton.addEventListener("click", () => {
+    fastNavMenu.classList.toggle("open");
+  });
+
+  fastNavMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      fastNavMenu.classList.remove("open");
+    });
+  });
+
+}
+/* ========================================
+   GÅ DIREKTE TIL MEDLEM
+======================================== */
+
+const memberLinks = document.querySelectorAll("[data-member]");
+const horizontalSection = document.querySelector(".horizontal-team");
+const horizontalTrack = document.querySelector(".horizontal-team-track");
+
+memberLinks.forEach((link) => {
+
+  link.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    const memberIndex = Number(link.dataset.member);
+
+    if (!horizontalSection || !horizontalTrack) {
+      return;
+    }
+
+
+    /* MOBIL */
+
+    if (window.innerWidth <= 800) {
+
+      const members =
+        document.querySelectorAll(".horizontal-member");
+
+      const selectedMember =
+        members[memberIndex];
+
+      if (selectedMember) {
+
+        selectedMember.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+
+      return;
+    }
+
+
+    /* DESKTOP - HORIZONTAL SCROLL */
+
+    const sectionTop =
+      window.scrollY +
+      horizontalSection.getBoundingClientRect().top;
+
+    const scrollDistance =
+      horizontalSection.offsetHeight -
+      window.innerHeight;
+
+    const totalMembers =
+      horizontalTrack.querySelectorAll(
+        ".horizontal-member"
+      ).length;
+
+
+    /*
+      0 = Hina
+      1 = Tam
+      2 = Benjamin
+      3 = Aisha
+      4 = Jan Kåre
+    */
+
+    const progress =
+      memberIndex / (totalMembers - 1);
+
+
+    const targetScroll =
+      sectionTop +
+      (scrollDistance * progress);
+
+
+    window.scrollTo({
+      top: targetScroll,
+      behavior: "smooth"
+    });
+
+
+    /* Lukk fast meny */
+
+    const fastMenu =
+      document.getElementById("fastNavMenu");
+
+    if (fastMenu) {
+      fastMenu.classList.remove("open");
+    }
+
+  });
+
+});
