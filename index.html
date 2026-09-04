@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="gruppe-hero">
+
+    <header class="gruppe-hero" id ="forside">
       <!-- Ligger en tilfeldig bilde nå som forside på nettsiden, men det kan alltids endre før innlevering.-->
       <img src="./Bilder/gruppe.png" alt="Gruppe 19 Logo" class="gruppe-bilde" />
       <div class ="gruppe-tekst">
@@ -18,16 +19,39 @@
 
       </div>
      
+ <nav class="side-menu">
+  <button class="menu-button" id="menuButton">
+    ☰ Meny
+  </button>
+
+  <nav class="quick-nav" aria-label="Hurtignavigasjon">
+  <a href="#forside">Forside</a>
+  <div class="quick-members">
+    <a href="#medlemmer">Medlemmer</a>
+
+    <div class="quick-submenu">
+      <a href="#hina">Hina</a>
+      <a href="#tam">Tam</a>
+      <a href="#benjamin">Benjamin</a>
+      <a href="#aisha">Aisha</a>
+      <a href="#jankaare">Jan Kåre</a>
+    </div>
+  </div>
+  
+  <a href="#om-oss">Om oss</a>
+  <a href="#ambisjoner">Ambisjoner</a>
+</nav>
 
     </header>
 
     <main>
-      <section class="horizontal-team">
+      <section class="horizontal-team" id="medlemmer">
+      
   <div class="horizontal-team-sticky">
 
     <div class="horizontal-team-track">
 
-      <article class="horizontal-member">
+      <article class="horizontal-member" id="hina">
         <div class="horizontal-number">01</div>
 
         <div class="horizontal-image">
@@ -80,7 +104,7 @@
       </article>
 
 
-      <article class="horizontal-member">
+      <article class="horizontal-member" id ="tam">
         <div class="horizontal-number">02</div>
 
         <div class="horizontal-image">
@@ -114,7 +138,7 @@
       </article>
 
 
-      <article class="horizontal-member">
+      <article class="horizontal-member" id="benjamin">
         <div class="horizontal-number">03</div>
 
         <div class="horizontal-image">
@@ -145,7 +169,7 @@
       </article>
 
 
-      <article class="horizontal-member">
+      <article class="horizontal-member" id="aisha">
         <div class="horizontal-number">04</div>
 
         <div class="horizontal-image">
@@ -191,7 +215,7 @@
       </article>
 
 
-      <article class="horizontal-member">
+      <article class="horizontal-member" id="jankaare">
         <div class="horizontal-number">05</div>
 
         <div class="horizontal-image">
@@ -239,7 +263,7 @@
       <section>
         
         <section class ="kort-gruppe-info">
-          <div class= "kort-info">
+          <div class= "kort-info" id="om-oss">
             <h2>Om oss som gruppe</h2> <!--Her har jeg bare skrevet noe tekst inn bare å endre hvis dere tenker at noe som skal foranders eller bør legge til-->
               <p>Vi er en gruppe studenter på fem studenter som jobber med et prosjekt i IS-310. 
               Vi er gruppe 19 som består av Hina, Tam, Benjamin, Aisha og Jan Kåre. Mer informasjon om oss kan du finne på vår side.
@@ -248,7 +272,7 @@
               Gruppen vår består av ulike bakgrunner og erfaringer innenfor IT</p>
           </div>
 
-          <div class="kort-info">
+          <div class="kort-info" id="ambisjoner">
               <h2>Vår ambisjoner</h2>
               <p>
               Som gruppe har vi høye ambisjoner for prosjekte og leverer med høy kvalitet som gjenspeiler vår kompetanse, kunnskaper og ferdigheter innen for IT. 

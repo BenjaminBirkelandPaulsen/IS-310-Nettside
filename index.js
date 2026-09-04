@@ -179,4 +179,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+/* MENY */
 
+const menuButton = document.getElementById("menuButton");
+const menuLinks = document.getElementById("menuLinks");
+
+if (menuButton && menuLinks) {
+
+  menuButton.addEventListener("click", () => {
+    menuLinks.classList.toggle("open");
+  });
+
+  const links = menuLinks.querySelectorAll("a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuLinks.classList.remove("open");
+    });
+  });
+
+}
