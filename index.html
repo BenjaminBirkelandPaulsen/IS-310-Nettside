@@ -4,22 +4,426 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IS-310 Nettside</title>
-    <link rel="stylesheet" href="./Css/Shared/navbar.css" />
-    <link rel="stylesheet" href="./Css/Single/index.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <div data-navbar></div>
-    <header>
-      <h1>IS-310 Nettside</h1>
-      <p>Et enkelt skjelett klart for GitHub Pages.</p>
+<body>
+  <button class="fast-nav-button" id="fastNavButton" aria-label="Åpne navigasjon">
+  ☰
+</button>
+
+<div class="fast-nav-menu" id="fastNavMenu">
+  <a href="#forside">Forside</a>
+  <a href="#om-oss">Om oss</a>
+  <a href="#ambisjoner">Ambisjoner</a>
+  <div class="fast-nav-members">
+    <a href="#medlemmer">Medlemmer</a>
+
+    <div class="fast-nav-submenu">
+      <a href="#" data-member="0">Hina</a>
+      <a href="#" data-member="1">Tam</a>
+      <a href="#" data-member="2">Benjamin</a>
+      <a href="#" data-member="3">Aisha</a>
+      <a href="#" data-member="4">Jan Kåre</a>
+    </div>
+  </div>
+
+    
+  
+  <a href="#kontaktperson">Kontaktperson</a>
+</div>
+
+  
+
+    <header class="gruppe-hero" id ="forside">
+      <!-- Ligger en tilfeldig bilde nå som forside på nettsiden, men det kan alltids endre før innlevering.-->
+      <img src="./Bilder/Bakgrunner/pascal-debrunner-d7Bvh_2cFnA-unsplash.jpg" alt="Gruppe 19 Logo" class="gruppe-bilde" />
+      
+      <div class="gruppe-tekst">
+
+        <p id="hero-eyebrow">IS-310 Prosjektgjennomføring</p>
+
+        <h1 id="hero-title">Gruppe 19</h1>
+
+         <p id="hero-description">
+           Vi er fem studenter som samarbeider om prosjektet i IS-310.
+         </p>
+
+    </div>
+     
+ <nav class="quick-nav" aria-label="Hurtignavigasjon">
+
+  <a href="#forside">Forside</a>
+  <a href="#om-oss">Om oss</a>
+  <a href="#ambisjoner">Ambisjoner</a>
+
+  <div class="quick-members">
+    <a href="#medlemmer">Medlemmer</a>
+
+    <div class="quick-submenu">
+      <a href="#" data-member="0">Hina</a>
+      <a href="#" data-member="1">Tam</a>
+      <a href="#" data-member="2">Benjamin</a>
+      <a href="#" data-member="3">Aisha</a>
+      <a href="#" data-member="4">Jan Kåre</a>
+    </div>
+  </div>
+
+  
+  <a href="#kontaktperson">Kontaktperson</a>
+
+</nav>
     </header>
 
     <main>
       <section>
-        <h2>Om siden</h2>
-        <p>Bruk denne siden som utgangspunkt for videre utvikling.</p>
-      </section>
+        
+        <section class ="kort-gruppe-info">
+          <div class= "kort-info" id="om-oss">
+            <h2>Om oss som gruppe</h2> <!--Her har jeg bare skrevet noe tekst inn bare å endre hvis dere tenker at noe som skal foranders eller bør legge til-->
+              <p>Vi er en sammensatt gjeng med sprik i alder, etnisk bakgrunn og livserfaringer. Akkurat som en godtepose har vi noe for enhver smak, og sammen skaper vi en helhet som er mer enn summen av delene.
+              <br><br>Alle har et unikt sett med ferdigheter. Fordi vi går samme studium, har vi en sterk overlappende kompetanse som grunnlag innen applikasjons-utvikling og prosjektarbeid, noe som gir oss en felles forståelse for hvordan ting skal gjøres og fleksibilitet til å støtte hverandre opp. 
+              <br><br>Samtidig er vi individer spisset etter interesser i backend, databasesystemer, UX og prosjektledelse som gjør at vi dekker store områder med skarp pressisjon. Dette mangfoldet av erfaringer og tekniske ferdigheter gjør oss til et team som utfyller hverandre godt og kan løse komplekse oppgaver på tvers av fagområder.</p>
+          </div>
+
+          <div class="kort-info" id="ambisjoner">
+              <h2>Vår ambisjoner</h2>
+              <p>
+                Vår ambisjon er å levere en robust og skalerbar IT-løsning som løser et reelt samfunnsproblem. Vi forplikter oss til å utfordre oss selv faglig gjennom hele prosjektperioden og til å levere et resultat som dekker prosjektgivers behov og er noe vi kan være stolte av. Vi ser på prosjektgiver som en nøkkelpartner. Gjennom tett dialog og godt samarbeid vil vi sikre at sluttresultatet både blir noe prosjektgiver blir fornøyd med, og en løsning vi stolt kan sette navnet vårt på.
+                <br><br>Vi vil arbeide med et prosjekt som utfordrer våre kunnskaper og forbedrer faglig kompetanse. Vi vil skape et brukervennlig produkt som er av ypperste kvalitet og stabil nok til å overleve dagens uforutsigbare samfunn, samt dekke reelle behov hos kundene.
+                  For oss er prosessen og reisen mot målet er like viktig som selve resultatet!
+
+              </p>
+          </div>
+        </section>
+      <section class="horizontal-team" id="medlemmer">
+      
+  <div class="horizontal-team-sticky">
+
+    <div class="horizontal-team-track">
+
+      <article class="horizontal-member" id="hina">
+        <div class="horizontal-number">01</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/Hina.png" alt="Shahzadi Hina Gul">
+
+        </div>
+        <div class="social-links">
+          <!-- LinkedIn mangler -->
+         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/Shahzadigul" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+          <a href="mailto:eksempel@eksempel.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+        </div>
+
+        <div class="horizontal-text">
+        
+          <h2>Shahzadi Hina Gul</h2>
+                   <p>
+                            Jeg er en positiv, strukturert og lærevillig person med interesse for IT,
+                            informasjonssystemer og digitale løsninger. Gjennom studiene har jeg fått
+                            erfaring med systemutvikling, prosjektarbeid og hvordan teknologi kan brukes
+                            til å løse praktiske utfordringer.
+                          </p>
+                          
+                          <p>
+                            Jeg har også erfaring med CRM-systemer og Salesforce, samt en bakgrunn innen
+                            økonomi og handel. Denne kombinasjonen har gitt meg interesse for både den
+                            tekniske siden av IT og hvordan digitale systemer kan støtte virksomheters
+                            behov og arbeidsprosesser.
+                          </p>
+                          
+                          <p>
+                            Som person er jeg samarbeidsorientert, nysgjerrig og løsningsorientert. Jeg
+                            liker å lære nye ting, dele ideer og bidra til godt samarbeid. Jeg er spesielt
+                            interessert i hvordan IT, informasjon og forretningsforståelse kan kombineres
+                            for å utvikle gode og brukervennlige løsninger.
+                          </p>
+
+                          <ul>
+                            <li><strong>Informasjonssystemer:</strong> Systemutvikling, digitale løsninger og forretningsprosesser</li>
+                            <li><strong>CRM-systemer:</strong> Salesforce og forståelse av kundehåndteringssystemer</li>
+                            <li><strong>Frontend-utvikling:</strong> HTML, CSS, JavaScript</li>
+                            <li><strong>Programmering:</strong> Java, Python og C#</li>
+                            <li><strong>Database-utvikling:</strong> SQL og MySQL</li>
+                            <li><strong>UX/UI-design:</strong> Figma, prototyping og brukergrensesnitt</li>
+                            <li><strong>Webutvikling:</strong> Geografisk Webutvikling </li>
+                            <li><strong>Utviklerverktøy:</strong> Git, GitHub, Docker, VS Code og basis kjenskap av Figma</li>
+                            <li><strong>Forretningsforståelse:</strong> Økonomi, handel og hvordan IT-systemer støtter virksomhetsbehov</li>
+                          </ul>
+        </div>
+      </article>
+
+
+      <article class="horizontal-member" id ="tam">
+        <div class="horizontal-number">02</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/Tam.png" alt="Tam Thanh Nguyen">
+        </div>
+         
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/tam-thanh-nguyen-641606433/" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/Tammey03" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+          <!-- En test med mail-->
+          <a href="mailto:tammey.nguyen@gmail.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+          
+        </div>
+
+        <div class="horizontal-text">
+          
+          <h2>Tam Thanh Nguyen</h2>
+          <p>Jeg er 23 år gammel, kommer fra Kristiansand og er studerer IT og informasjonssystemer. Som student er nysgjerrig og engasjert i teknologi og programvareutvikling. Jeg har vært interessert i webutvikling og programmering siden jeg var på vidregående. Gjennom studietiden har jeg jobbet i grupper og individuelt på prosjekter både frontend og backend. Også intressert i tegning og design som jeg videre ønsker å utvikle videre i spill og webutvikling.</p>
+          <p>Mine mål og ambisjoner er å utvikle mine IT-ferdigheter til videre bruke den til å skape løsninger som er brukervennlige og effektive. Jeg ønsker å bidra til å skape innovative løsninger som kan gjøre en positiv forskjell i samfunnet. Trives godt å jobbe i gruppe, men kan jobbe individuelt og jeg er alltid åpen for å lære av andre og dele min kunnskap. Fremtidig ønsker jeg å utdype meg videre innen frontend, der jeg kan skape brukervennlige og visuelt tiltalende grensesnitt som gir en god brukeropplevelse.</p>
+
+          <h3>Relevante IT - IT-kompetanseområder: </h3>
+              <ul>
+                  <li><strong>Frontend - utvikling:</strong> HTML, CSS, JavaScript, litt PHP</li>
+                  <li><strong>Backend - utvikling:</strong> C# , Java, python</li>
+                  <li><strong>Databaser - utvikling:</strong> SQL, MySQL</li>
+                  <li><strong>Utvirkler - verktøy:</strong> Docker, GitHub</li>
+                  </ul>
+
+                
+        </div>
+      </article>
+
+
+      <article class="horizontal-member" id="benjamin">
+        <div class="horizontal-number">03</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/Benjamin.png" alt="Benjamin Birkeland Paulsen">
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/benjamin-birkeland-paulsen-82a363254/" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/BenjaminBirkelandPaulsen" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+          <a href="mailto:benjaminbp@uia.no"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+        </div>
+
+        <div class="horizontal-text">
+         
+          <h2>Benjamin Birkeland Paulsen</h2>
+        <p>
+          Hei! Mitt navn er Benjamin, jeg er 20 år gammel, født og oppvokst i Kristiansand. Jeg har holdt på med IT relaterte fag i 7 år og trives godt med det. 
+          Mine interesser er teknologi, historie og sport. 
+          <br><br>
+          Mitt mål med Bachelor prosjektet er å skape en velfungerende applikasjon, samt utvikle meg som person slik at jeg er bedre egnet yrkeslivet. 
+        </p>
+            
+                    <h3>Relevante IT-kompetanseområder: </h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> HTML, CSS og litt JavaScript </li>
+                        <li><strong>Backend:</strong> C# og python </li>
+                        <li><strong>Database:</strong> SQL og PL/pgSQL </li>
+                        <li><strong>Andre verktøy:</strong> AI, Docker, Github, Figma og PowerBI </li>
+                    </ul>
+        </div>
+      </article>
+
+
+      <article class="horizontal-member" id="aisha">
+        <div class="horizontal-number">04</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/Aisha.png" alt="Aisha Rafi">
+        </div>
+
+        <div class="social-links">
+          <!-- Mangler LinkedIn profil -->
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/aisha-ra" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+        <a href="mailto:eksempel@eksempel.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+        </div>
+
+        <div class="horizontal-text">
+        
+          <h2>Aisha Rafi</h2>
+          <p>
+                        Jeg studerer IT og informasjonssystemer og er spesielt interessert i design,
+                        brukeropplevelse og utvikling av brukervennlige digitale løsninger.
+                        Jeg liker å jobbe med hvordan nettsider og applikasjoner ser ut, hvordan de er bygget opp,
+                        og hvordan brukeren opplever løsningen.
+                    </p>
+
+                    
+
+                    <p>
+                        Gjennom studiet og egne prosjekter har jeg jobbet med både design og utvikling av digitale løsninger.
+                        Jeg ønsker å videreutvikle ferdighetene mine innen UX/UI-design, frontend-utvikling
+                        og design av moderne og intuitive brukergrensesnitt.
+                    </p>
+
+                    
+
+                    <h3>Relevante IT-kompetanseområder:</h3>
+
+                    <ul>
+                        <li><strong>UX/UI-design:</strong> Figma, prototyping og brukergrensesnitt</li>
+                        <li><strong>Frontend-utvikling:</strong> HTML, CSS, JavaScript, React og TypeScript</li>
+                        <li><strong>Responsive og brukervennlige nettsider:</strong> Design og utvikling av nettsider som fungerer godt på ulike enheter</li>
+                        <li><strong>Utviklerverktøy:</strong> Git, GitHub, Docker, VS Code, Figma</li>
+                    </ul>
+        </div>
+      </article>
+
+
+      <article class="horizontal-member" id="jankaare">
+        <div class="horizontal-number">05</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/Jankaare.png" alt="Jan Kåre Tredal">
+        </div>
+
+        <div class="social-links">
+          <!-- Mangler LinkedIn profil -->
+          <a href="https://www.linkedin.com/in/jan-k%C3%A5re-treldal-16b581390/" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/Janke82" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+          <a href="mailto:eksempel@eksempel.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+        </div>
+
+        <div class="horizontal-text">
+          
+          <h2>Jan Kåre Tredal</h2>
+        <p>
+                        Jeg er tidligere allmennlærer i grunnskolen, og nå student på IT og kommunikasjonssystemer ved UiA Kristiansand. Mine sterkeste kompetanseområder ligger i visuell kommunikasjon, rådgivning og idéutvikling. 
+                        I lærerutdanningen har jeg fordypet meg i norskfaget, og fra tidligere har jeg en treårig estetisk bakgrunn fra VGS med tegning, form og farge samt VG2 reklame, illustrasjon og design. 
+                    </p>
+                    <p> 
+                        Gjennom IT-studiet har jeg også et valgemne med 30sp innenfor bærekraft.
+                    </p>
+                    
+                    <p>
+                        I prosjekter trives jeg best i rollen som idéutvikler og rådgiver. Jeg er opptatt av at tekniske løsninger skal løse reelle behov for oppdragsgiver, kommunisere godt og være universelt utformet. 
+                        Med min språklige, visuelle og analytiske bakgrunn bidrar jeg til helhetstenkning hele veien fra de første konseptskissene, KI-assistert idémyldring og reserach, til ferdig brukeropplevelse.
+                    </p>
+                    <h3>Relevante IT-kompetanseområder:</h3>
+                    <ul>
+                        <li><strong>Rådgivning og idéutvikling:</strong> Konseptutvikling, forretningsforståelse, behovsanalyse for bedrifter</li>
+                        <li><strong>Bærekraft og tilgjengelighet:</strong> Bærekraftige IT-løsninger, sosial bærekraft, universell utforming (WCAG)</li>
+                        <li><strong>UX og visuell kommunikasjon:</strong> UI/UX-design, prototyping (Figma), farge- og layoutforståelse</li>
+                        <li><strong>Språk, struktur og KI:</strong> Innholdsstrategi, analytisk problemløsning, KI-assistert idegenerering og KI-prompting</li>
+                        <li><strong>Teknisk forståelse:</strong> Kodestruktur, grunnleggende HTML/CSS, Git/GitHub og VS Code</li>
+                    </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+          <!-- Kommentert ut karusell -->
+        <!-- <section class="team-section">
+          <div class="team-header">
+            <p class="team-kicker">Kun testdata</p>
+            <h2>Gruppemedlemmer</h2>
+          </div>
+
+          <div class="team-marquee" aria-label="Gruppemedlemmer">
+            <div class="team-track" id="teamTrack">
+              <article class="team-card">
+                <img src="./Bilder/Members/Hina.png" alt="Hina profilbilde" class="members" />
+                <div class="team-card__content">
+                  <h3>Shahzadi Hina Gul</h3>
+                  <p>Interessert i brukeropplevelse og kreativ problemløsning.</p>
+                  <div class="skill-list">
+                    <span>UX</span>
+                    <span>Figma</span>
+                    <span>HTML</span>
+                  </div>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-card">
+                <img src="./Bilder/Members/Tam.png" alt="Tam profilbilde" class="members" />
+                <div class="team-card__content">
+                  <h3>Tam Thanh Nguyen</h3>
+                  <p>Fokuserer på struktur, utvikling og praktisk løsninger.</p>
+                  <div class="skill-list">
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+                    <span>Testing</span>
+                  </div>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-card">
+                <img src="./Bilder/Members/Benjamin.png" alt="Benjamin profilbilde" class="members" />
+                <div class="team-card__content">
+                  <h3>Benjamin Birkeland</h3>
+                  <p>Ser etter effektive løsninger og tydelig kommunikasjon.</p>
+                  <div class="skill-list">
+                    <span>React</span>
+                    <span>UI</span>
+                    <span>Analyse</span>
+                  </div>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-card">
+                <img src="./Bilder/Members/Aisha.png" alt="Aisha profilbilde" class="members" />
+                <div class="team-card__content">
+                  <h3>Aisha Rafi</h3>
+                  <p>Engasjert i design, struktur og samarbeidsdrevet arbeid.</p>
+                  <div class="skill-list">
+                    <span>Design</span>
+                    <span>HTML</span>
+                    <span>Content</span>
+                  </div>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="team-card">
+                <img src="./Bilder/Members/Jankaare.png" alt="Jan Kåre profilbilde" class="members" />
+                <div class="team-card__content">
+                  <h3>Jan Kåre Tredal</h3>
+                  <p>Jobber med teknisk utvikling og å gjøre idéer konkrete.</p>
+                  <div class="skill-list">
+                    <span>Python</span>
+                    <span>API</span>
+                    <span>Backend</span>
+                  </div>
+                  <div class="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section> 
+      </section> -->
     </main>
-    <script src="./JS/navbar.js"></script>
+    <footer class="footer">
+    <div class="footer-content" id="kontaktperson">
+        <h2>Kontaktperson </h2>
+        
+        <p>Benjamin Birkeland Paulsen </p>
+        <p>Telefon: +47 91997087</p>
+        <p>E-post: benjaminbp@uia.no</p>
+
+        <p class="copyright">&copy; 2026 Gruppe 19. Hina, Tam, Benjamin, Aisha og Jan Kåre</p>
+    </div>
+</footer>
+
+
+    <script src="index.js"></script>
   </body>
 </html>
