@@ -1360,20 +1360,19 @@ main {
   }
 
   .horizontal-member {
-   position: relative;
+    position: relative;
 
-  width: 100vw;
-  height: 100vh;
+    width: 100%;
+    height: auto;
+    min-height: auto;
 
-  flex: 0 0 100vw;
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  overflow: hidden;
+    display: block;
 
-  display: flex;
-  align-items: center;
+    overflow: visible;
 
-  padding: 0;
+    padding: 40px 20px 70px;
   }
 
   .horizontal-image,
@@ -1385,16 +1384,32 @@ main {
     top: auto;
 
     width: 100%;
-    height: 44vh;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 4 / 3;
 
-    margin-bottom: 18px;
+    margin: 0 auto 20px;
+
+    overflow: hidden;
+  }
+
+  .horizontal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .social-links {
     position: relative;
+
     top: auto;
     left: auto;
-    margin-bottom: 20px;
+
+    justify-content: flex-start;
+
+    margin: 0 auto 25px;
+
+    max-width: 600px;
   }
 
   .horizontal-text,
@@ -1402,22 +1417,35 @@ main {
     position: relative;
 
     left: auto;
+    right: auto;
     top: auto;
 
-    transform: none;
-
     width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    transform: none;
   }
 
   .horizontal-text h2 {
-    font-size: clamp(2rem, 9vw, 3.2rem);
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  .horizontal-text p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .horizontal-number {
-    right: 0;
-    bottom: 5%;
+    position: absolute;
 
-    font-size: 45vw;
+    right: 10px;
+    bottom: 20px;
+
+    font-size: 30vw;
+
+    z-index: 0;
   }
 }
 
