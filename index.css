@@ -191,8 +191,14 @@ main {
   font-weight: 600;
 }
 
+.social-links a {
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
 .social-links a:hover {
-  background: #0f2f52;
+  background: transparent;
+  transform: scale(1.2);
 }
 
 .kort-gruppe-info {
@@ -1208,9 +1214,7 @@ main {
   object-fit: cover;
 }
 
-.horizontal-member:hover .horizontal-image img {
-  transform: scale(1.035);
-}
+
 
 .social-links {
   position: absolute;
@@ -1889,3 +1893,48 @@ html {
     line-height: 1.7;
   }
 }
+
+
+/* ========================================
+  Gruppe video 
+======================================== */
+.video-section {
+  background-color: #eef4fb;
+}
+
+.group-video {
+  width: 100%;
+  padding: 35px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e4effc;
+
+  box-sizing: border-box;
+}
+
+.group-video video {
+  width: min(900px, 90vw);
+  height: auto;
+
+  display: block;
+
+  border-radius: 16px;
+}
+
+.video-placeholder {
+  text-align: center;
+  color: black;
+}
+
+.video-placeholder h2 {
+  margin-bottom: 10px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.video-placeholder p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
