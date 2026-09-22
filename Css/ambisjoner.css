@@ -1,0 +1,262 @@
+/* ========================================
+   VÅRE AMBISJONER – GRUNNOPPSETT OG BAKGRUNN
+======================================== */
+
+#ambisjoner {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 65px 45px;
+
+  border-radius: 36px;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(96, 165, 250, 0.24),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 10% 100%,
+      rgba(191, 219, 254, 0.24),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f9ff,
+      #eaf3ff
+    );
+
+  text-align: left;
+}
+
+#ambisjoner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -260px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+/* ========================================
+   VÅRE AMBISJONER – INTRODUKSJON
+======================================== */
+
+.ambisjoner-intro {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1050px;
+}
+
+.ambisjoner-intro h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  color: #172234;
+}
+
+.ambisjoner-intro p {
+  margin: 0;
+
+  color: #52617a;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ========================================
+   VÅRE AMBISJONER – HØYDEPUNKTER OG HOVER
+======================================== */
+
+.ambisjon-highlights {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-top: 45px;
+}
+
+.ambisjon-highlight {
+  padding: 23px 22px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border: 1px solid rgba(219, 227, 240, 0.9);
+
+  border-radius: 17px;
+
+  box-shadow: 0 8px 24px rgba(18, 59, 102, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ambisjon-highlight:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 16px 30px rgba(18, 59, 102, 0.12);
+}
+
+.ambisjon-highlight span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.ambisjon-highlight h3 {
+  margin: 0;
+
+  color: #172234;
+
+  font-size: 1rem;
+}
+
+/* ========================================
+   VÅRE AMBISJONER – NETTBRETT
+======================================== */
+
+@media (max-width: 950px) {
+.ambisjon-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ========================================
+   VÅRE AMBISJONER – MOBIL FOR GRUNNOPPSETT
+======================================== */
+
+@media (max-width: 600px) {
+#ambisjoner {
+    padding: 38px 25px;
+    border-radius: 22px;
+  }
+
+.ambisjon-highlights {
+    grid-template-columns: 1fr;
+  }
+
+.ambisjoner-intro h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+/* ========================================
+   VÅRE AMBISJONER – HELSIDES SEKSJON
+======================================== */
+
+#ambisjoner.kort-info {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  margin: 0;
+  padding: clamp(60px, 8vw, 120px) 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  scroll-margin-top: 80px;
+
+  background-color: #eef2f6;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ========================================
+   VÅRE AMBISJONER – TEKSTKORT
+======================================== */
+
+#ambisjoner .ambisjoner-innhold {
+  width: min(900px, 100%);
+  padding: clamp(32px, 5vw, 64px);
+
+  text-align: left;
+
+  background-color: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(23, 44, 74, 0.1);
+}
+
+/* ========================================
+   VÅRE AMBISJONER – OVERSKRIFT OG AVSNITT
+======================================== */
+
+#ambisjoner h2 {
+  margin: 0 0 28px;
+
+  color: #1b2430;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+#ambisjoner .ambisjoner-innhold p {
+  max-width: 72ch;
+  margin: 0 0 20px;
+
+  color: #4d5d7c;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+#ambisjoner .ambisjoner-innhold p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   VÅRE AMBISJONER – MOBIL FOR HELSIDES SEKSJON
+======================================== */
+
+@media (max-width: 700px) {
+#ambisjoner.kort-info {
+    min-height: auto;
+    padding: 60px 16px;
+  }
+
+#ambisjoner .ambisjoner-innhold {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+#ambisjoner h2 {
+    margin-bottom: 22px;
+    font-size: 2.2rem;
+  }
+
+#ambisjoner .ambisjoner-innhold p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+}
+

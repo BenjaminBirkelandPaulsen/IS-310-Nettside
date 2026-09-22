@@ -1,3 +1,15 @@
+  /* ===================================
+   CSS for hele nettsiden
+  Filene er delt opp i forskjellige css filer for å gjøre det mer oversiktlig.
+   Filene kan du finne i mappen css. 
+   De forskjellige filene er:
+    ambisjoner.css
+    style.css
+    om-oss.css
+    medlemmer.css
+    video.css
+======================================== */
+
 body{
     text-align: center;
     max-width: auto;
