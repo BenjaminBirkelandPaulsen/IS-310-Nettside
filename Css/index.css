@@ -1,3 +1,15 @@
+  /* ===================================
+   CSS for hele nettsiden
+  Filene er delt opp i forskjellige css filer for å gjøre det mer oversiktlig.
+   Filene kan du finne i mappen css. 
+   De forskjellige filene er:
+    ambisjoner.css
+    style.css
+    om-oss.css
+    medlemmer.css
+    video.css
+======================================== */
+
 body{
     text-align: center;
     max-width: auto;
@@ -191,8 +203,14 @@ main {
   font-weight: 600;
 }
 
+.social-links a {
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
 .social-links a:hover {
-  background: #0f2f52;
+  background: transparent;
+  transform: scale(1.2);
 }
 
 .kort-gruppe-info {
@@ -1208,9 +1226,7 @@ main {
   object-fit: cover;
 }
 
-.horizontal-member:hover .horizontal-image img {
-  transform: scale(1.035);
-}
+
 
 .social-links {
   position: absolute;
@@ -1360,20 +1376,19 @@ main {
   }
 
   .horizontal-member {
-   position: relative;
+    position: relative;
 
-  width: 100vw;
-  height: 100vh;
+    width: 100%;
+    height: auto;
+    min-height: auto;
 
-  flex: 0 0 100vw;
-  box-sizing: border-box;
+    box-sizing: border-box;
 
-  overflow: hidden;
+    display: block;
 
-  display: flex;
-  align-items: center;
+    overflow: visible;
 
-  padding: 0;
+    padding: 40px 20px 70px;
   }
 
   .horizontal-image,
@@ -1385,16 +1400,32 @@ main {
     top: auto;
 
     width: 100%;
-    height: 44vh;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 4 / 3;
 
-    margin-bottom: 18px;
+    margin: 0 auto 20px;
+
+    overflow: hidden;
+  }
+
+  .horizontal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .social-links {
     position: relative;
+
     top: auto;
     left: auto;
-    margin-bottom: 20px;
+
+    justify-content: flex-start;
+
+    margin: 0 auto 25px;
+
+    max-width: 600px;
   }
 
   .horizontal-text,
@@ -1402,22 +1433,35 @@ main {
     position: relative;
 
     left: auto;
+    right: auto;
     top: auto;
 
-    transform: none;
-
     width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    transform: none;
   }
 
   .horizontal-text h2 {
-    font-size: clamp(2rem, 9vw, 3.2rem);
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  .horizontal-text p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .horizontal-number {
-    right: 0;
-    bottom: 5%;
+    position: absolute;
 
-    font-size: 45vw;
+    right: 10px;
+    bottom: 20px;
+
+    font-size: 30vw;
+
+    z-index: 0;
   }
 }
 
@@ -1861,3 +1905,48 @@ html {
     line-height: 1.7;
   }
 }
+
+
+/* ========================================
+  Gruppe video 
+======================================== */
+.video-section {
+  background-color: #eef4fb;
+}
+
+.group-video {
+  width: 100%;
+  padding: 35px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e4effc;
+
+  box-sizing: border-box;
+}
+
+.group-video video {
+  width: min(900px, 90vw);
+  height: auto;
+
+  display: block;
+
+  border-radius: 16px;
+}
+
+.video-placeholder {
+  text-align: center;
+  color: black;
+}
+
+.video-placeholder h2 {
+  margin-bottom: 10px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.video-placeholder p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+

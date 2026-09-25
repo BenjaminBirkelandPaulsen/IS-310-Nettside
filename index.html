@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IS-310 Nettside</title>
-    <link rel="stylesheet" href="index.css" />
+     <!-- Dette er den gamle index.css filen som vi ikke bruker lenger. 
+      Vi har spilt den opp i flere filer for å gjøre det mer oversiktlig.
+    <link rel="stylesheet" href="Css/index.css" /> 
+  -->
+    <link rel="stylesheet" href="Css/ambisjoner.css"  />
+    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="Css/om-oss.css" />
+    <link rel="stylesheet" href="Css/medlemmer.css" />
+    <link rel="stylesheet" href="Css/video.css" /> 
+    
+
   </head>
 <body>
   <button class="fast-nav-button" id="fastNavButton" aria-label="Åpne navigasjon">
@@ -13,6 +23,7 @@
 
 <div class="fast-nav-menu" id="fastNavMenu">
   <a href="#forside">Forside</a>
+  <a href="#group-video">Video</a>
   <a href="#om-oss">Om oss</a>
   <a href="#ambisjoner">Ambisjon</a>
   <div class="fast-nav-members">
@@ -24,11 +35,9 @@
       <a href="#" data-member="2">Benjamin</a>
       <a href="#" data-member="3">Aisha</a>
       <a href="#" data-member="4">Jan Kåre</a>
+      <a href="#" data-member="5">Alex</a>
     </div>
   </div>
-
-    
-  
   <a href="#kontaktperson">Kontaktperson</a>
 </div>
 
@@ -53,6 +62,7 @@
  <nav class="quick-nav" aria-label="Hurtignavigasjon">
 
   <a href="#forside">Forside</a>
+  <a href="#group-video">Video</a>
   <a href="#om-oss">Om oss</a>
   <a href="#ambisjoner">Ambisjon</a>
 
@@ -65,16 +75,30 @@
       <a href="#" data-member="2">Benjamin</a>
       <a href="#" data-member="3">Aisha</a>
       <a href="#" data-member="4">Jan Kåre</a>
+      <a href="#" data-member="5">Alex</a>
     </div>
   </div>
-
-  
-  <a href="#kontaktperson">Kontaktperson</a>
+<a href="#kontaktperson">Kontaktperson</a>
 
 </nav>
     </header>
 
     <main>
+      <section id="group-video">
+  <div class="group-video">
+    
+
+  <div class="video-placeholder">
+    <p>Video kommer snart</p>
+     <div class="group-video">
+      <video controls>
+      <source src="Video/testvideo.mov" type="video/mp4">
+       Din nettleser støtter ikke video.
+      </video>
+</div>
+  </div>
+</div>
+  </section>
       <section>
         
         <section class="kort-gruppe-info">
@@ -170,7 +194,7 @@
 </section>
           </div>
         </section>
-      <section class="horizontal-team" id="medlemmer">
+ <section class="horizontal-team" id="medlemmer">
       
   <div class="horizontal-team-sticky">
 
@@ -184,6 +208,7 @@
 
         </div>
         <div class="social-links">
+
           <!-- LinkedIn mangler -->
          <a href="https://www.linkedin.com/in/s-hina-gul-700651153" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
           <a href="https://github.com/Shahzadigul" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
@@ -237,7 +262,7 @@
         </div>
          
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/tam-thanh-nguyen-641606433/" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="linkedin.com/in/tam-nguyen-08968a436" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
           <a href="https://github.com/Tammey03" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
           <!-- En test med mail-->
           <a href="mailto:tammey.nguyen@gmail.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
@@ -247,13 +272,21 @@
         <div class="horizontal-text">
           
           <h2>Tam Thanh Nguyen</h2>
-          <p>Jeg er 23 år gammel, kommer fra Kristiansand og studerer IT og informasjonssystemer. Som student er jeg nysgjerrig og engasjert i teknologi og programvareutvikling. Jeg har vært interessert i webutvikling og programmering siden jeg gikk på videregående. Gjennom studietiden har jeg jobbet i grupper og individuelt på prosjekter innen både frontend og backend. Jeg er også interessert i tegning og design, noe jeg ønsker å utvikle videre innen spill- og webutvikling.</p>
-          <p>Mine mål og ambisjoner er å utvikle mine IT-ferdigheter til videre å bruke dem til å skape løsninger som er brukervennlige og effektive. Jeg ønsker å bidra til å skape innovative løsninger som kan gjøre en positiv forskjell i samfunnet. Jeg trives godt med å jobbe i gruppe, men jobber også godt individuelt. Jeg er alltid åpen for å lære av andre og dele min kunnskap. I fremtiden ønsker jeg å fordype meg videre innen frontend, der jeg kan skape brukervennlige og visuelt tiltalende grensesnitt som gir en god brukeropplevelse.</p>
-
+          <p>Jeg er 23 år gammel, kommer fra Kristiansand og studerer IT og informasjonssystemer. 
+            Som student er jeg nysgjerrig og engasjert i teknologi og programvareutvikling. Jeg har vært interessert i webutvikling og programmering siden jeg gikk på videregående. 
+            Gjennom studietiden har jeg jobbet i grupper og individuelt på prosjekter innen både frontend og backend. Jeg er også interessert i tegning og design, noe jeg ønsker å utvikle videre innen spill- og webutvikling.</p>
+          <p>Mine mål og ambisjoner er å utvikle mine IT-ferdigheter til videre å bruke dem til å skape løsninger som er brukervennlige, effektive og funksjonelle. 
+            Jeg ønsker å bidra til å skape innovative løsninger som kan gjøre en positiv forskjell i samfunnet. 
+            Jeg trives godt med å jobbe i gruppe, men jobber også godt individuelt. 
+            Jeg er alltid åpen for å lære av andre og dele min kunnskap.</p> 
+           <p> I fremtiden ønsker jeg å fordype meg videre innen frontend, der jeg kan skape brukervennlige og visuelt tiltalende grensesnitt som gir en god brukeropplevelse. 
+            Samtidig ønsker jeg å videreutvikle mine ferdigheter innen backend og utforske mulighetene innen spillprogrammering. 
+            Gjennom studiene har jeg fått erfaring med C#, et programmeringsspråk jeg synes er spesielt interessant, og som jeg ønsker å lære mer om og bruke videre innen både backend- og spillutvikling.
+           </p>
           <h3>Relevante IT-kompetanseområder:</h3>
               <ul>
                   <li><strong>Frontend-utvikling:</strong> HTML, CSS, JavaScript, litt PHP</li>
-                  <li><strong>Backend-utvikling:</strong> C#, Java, Python</li>
+                  <li><strong>Backend-utvikling:</strong> C#, Python</li>
                   <li><strong>Databaseutvikling:</strong> SQL, MySQL</li>
                   <li><strong>Utviklerverktøy:</strong> Docker, GitHub</li>
               </ul>
@@ -305,8 +338,9 @@
         </div>
 
         <div class="social-links">
-          <!-- Mangler LinkedIn profil -->
-          <!-- <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a> -->
+          <a href="https://www.linkedin.com/in/aisha-rafi-55177043a/" target="_blank" rel="noopener noreferrer">
+          <img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" />
+        </a>
           <a href="https://github.com/aisha-ra" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
         <a href="mailto:aishar@uia.no"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
         </div>
@@ -383,6 +417,48 @@
         </div>
       </article>
 
+
+
+<article class="horizontal-member" id="medlem6">
+        <div class="horizontal-number">06</div>
+
+        <div class="horizontal-image">
+          <img src="./Bilder/Members/alex-skar.png" alt="Alex Skar">
+        </div>
+
+        <div class="social-links">
+          <!-- Mangler LinkedIn profil -->
+          <a href="https://www.linkedin.com/in/alex-skar/" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon" /></a>
+          <a href="https://github.com/alexskar404" target="_blank" rel="noopener noreferrer"><img src="./Bilder/Icon/github-icon.png" alt="GitHub" class="github-icon" /></a>
+          <a href="mailto:alex.skar.privat@gmail.com"><img src="./Bilder/Icon/mail-icon.png" alt="Send e-post"></a>
+        </div>
+
+        <div class="horizontal-text">
+          
+          <h2>Alex Skar</h2>
+                    <p>
+                      Jeg er oppvokst i Sandefjord og flyttet ned til Kristiansand for IT-studiene.
+                      Det tok ikke langt tid før jeg forelsket med i Sørlandet, så nå har jeg bestemt
+                      meg for å bli boende. Som person er jeg veldig kreativ og trives i roller hvor
+                      jeg kan idémyldre og skape noe nytt. På fritiden liker jeg å drive med tegning,
+                      fotografi og andre kreative medier. Har også stor interesse for Japansk kultur.
+                      <br><br>
+                      Når det kommer til hvorfor jeg valgte å studere IT, så er grunnen fordi jeg ser 
+                      at det er framtiden og jeg har lyst til å være med på å utvikle løsninger som vil 
+                      hjelpe med å utvikle samfunnet videre. Jeg synes det er gøy med teknologi og spennende 
+                      å være vitne til de store forandringene som har skjedd på så kort tid. Det får meg til 
+                      å lure på hva slags teknologiske løsninger som vil utvikle seg bare 1 år fra nå. 
+                     </p>
+                    <h3>Relevante IT-kompetanseområder:</h3>
+                      <ul>
+                        <li><strong>UX/UI-design:</strong>  Figma, prototyping og brukergrensesnitt, 
+                          også kjennskap til Adobe Photoshop, Illustrator, InDesign, Premiere Pro og Audition</li>
+                        <li><strong>Frontend-utvikling:</strong> HTML, CSS og litt JavaScript</li>
+                        <li><strong>Utviklerverktøy:</strong> GitHub, VS Code, Figma</li>
+                        <li><strong>Andre verktøy:</strong> AI-vertøy, Pen og Papir</li>
+                    </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -396,7 +472,7 @@
         <p>Telefon: +47 91997087</p>
         <p>E-post: benjaminbp@uia.no</p>
 
-        <p class="copyright">&copy; 2026 Gruppe 19. Hina, Tam, Benjamin, Aisha og Jan Kåre</p>
+        <p class="copyright">&copy; 2026 Gruppe 19. Hina, Tam, Benjamin, Aisha, Alex og Jan Kåre</p>
     </div>
 </footer>
 
