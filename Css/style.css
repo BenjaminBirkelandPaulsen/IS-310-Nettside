@@ -104,7 +104,11 @@ main {
   box-sizing: border-box;
 }
 
-/* Felles boksstil som matcher blåtonene i medlemsseksjonen */
+/* NY FELLESSTIL – START
+   Kommenter ut reglene frem til NY FELLESSTIL – SLUTT for å bruke gammel stil.
+   Aktiver også GAMMEL STIL i om-oss.css og ambisjoner.css, og deaktiver
+   NY STIL i begge filene. Fellesstilen matcher blåtonene i medlemsseksjonen.
+*/
 .kort-gruppe-info > .kort-info {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
@@ -160,6 +164,8 @@ main {
     border-radius: 22px;
   }
 }
+
+/* NY FELLESSTIL – SLUTT */
 
 .section-label-small {
   display: inline-block;
