@@ -332,8 +332,16 @@ main {
   }
 
   .gruppe-hero {
-    height: 85svh;
-    min-height: 520px;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    background-color: #0f2f52;
+  }
+
+  .gruppe-hero > img,
+  .gruppe-bilde {
+    height: auto;
+    object-fit: contain;
   }
 
   .gruppe-tekst {
