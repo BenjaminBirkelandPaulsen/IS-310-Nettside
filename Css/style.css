@@ -104,6 +104,63 @@ main {
   box-sizing: border-box;
 }
 
+/* Felles boksstil som matcher blåtonene i medlemsseksjonen */
+.kort-gruppe-info > .kort-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 70px);
+  align-items: center;
+  padding: clamp(38px, 5vw, 65px);
+  background: #eef4fb;
+  border: 1px solid #dbe3f0;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(18, 59, 102, 0.08);
+  text-align: left;
+  scroll-margin-top: 30px;
+}
+
+.kort-gruppe-info .kort-info h2 {
+  margin: 0 0 25px;
+  color: #172234;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.kort-gruppe-info .kort-info p {
+  margin: 0;
+  color: #52617a;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.kort-gruppe-info .section-label-small {
+  color: #2563eb;
+}
+
+.kort-gruppe-info .om-oss-item,
+.kort-gruppe-info .ambisjon-highlight {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(18, 59, 102, 0.06);
+}
+
+@media (max-width: 950px) {
+  .kort-gruppe-info > .kort-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kort-gruppe-info > .kort-info {
+    padding: 38px 25px;
+    border-radius: 22px;
+  }
+}
+
 .section-label-small {
   display: inline-block;
   margin-bottom: 14px;
@@ -319,8 +376,8 @@ html {
 
   padding: 20px 34px;
 
-  background-color: #f4e9d8;
-  color: #3f3328;
+  background-color: #c7dbe6;
+  color: #243e50;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 
   text-decoration: none;
@@ -337,8 +394,15 @@ html {
 
 .quick-nav a:hover,
 .quick-nav a:focus-visible {
-  background-color: #dfc5a3;
+  background-color: #a9c5d6;
   transform: translateY(-2px);
+}
+
+.quick-nav > a,
+.quick-members > a {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -455,7 +519,7 @@ html {
 
 .fast-nav-button {
   position: fixed;
-  right: 25px;
+  right: clamp(40px, 5vw, 80px);
   top: 25px;
 
   width: 55px;
@@ -464,8 +528,9 @@ html {
   border: none;
   border-radius: 50%;
 
-  background-color: #f4e9d8;
-  color: #3f3328;
+  background-color: #c7dbe6;
+  color: #243e50;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 
   font-size: 1.4rem;
   cursor: pointer;
@@ -475,7 +540,7 @@ html {
 
 .fast-nav-button:hover,
 .fast-nav-button:focus-visible {
-  background-color: #dfc5a3;
+  background-color: #a9c5d6;
 }
 
 
@@ -485,7 +550,7 @@ html {
 
 .fast-nav-menu {
   position: fixed;
-  right: 25px;
+  right: clamp(40px, 5vw, 80px);
   top: 90px;
 
   display: none;
