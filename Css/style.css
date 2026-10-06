@@ -16,7 +16,8 @@ body{
 .gruppe-hero {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 100svh;
+  min-height: 800px;
   overflow: hidden;
 }
 
@@ -71,7 +72,7 @@ body{
 }
 .gruppe-bilde {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: block;
   margin: 0 auto;
   object-fit: cover;
@@ -102,6 +103,69 @@ main {
 .kort-info {
   box-sizing: border-box;
 }
+
+/* NY FELLESSTIL – START
+   Kommenter ut reglene frem til NY FELLESSTIL – SLUTT for å bruke gammel stil.
+   Aktiver også GAMMEL STIL i om-oss.css og ambisjoner.css, og deaktiver
+   NY STIL i begge filene. Fellesstilen matcher blåtonene i medlemsseksjonen.
+*/
+.kort-gruppe-info > .kort-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 70px);
+  align-items: center;
+  padding: clamp(38px, 5vw, 65px);
+  background: #eef4fb;
+  border: 1px solid #dbe3f0;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(18, 59, 102, 0.08);
+  text-align: left;
+  scroll-margin-top: 30px;
+}
+
+.kort-gruppe-info .kort-info h2 {
+  margin: 0 0 25px;
+  color: #172234;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.kort-gruppe-info .kort-info p {
+  margin: 0;
+  color: #52617a;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.kort-gruppe-info .section-label-small {
+  color: #2563eb;
+}
+
+.kort-gruppe-info .om-oss-item,
+.kort-gruppe-info .ambisjon-highlight {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(18, 59, 102, 0.06);
+}
+
+@media (max-width: 950px) {
+  .kort-gruppe-info > .kort-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kort-gruppe-info > .kort-info {
+    padding: 38px 25px;
+    border-radius: 22px;
+  }
+}
+
+/* NY FELLESSTIL – SLUTT */
 
 .section-label-small {
   display: inline-block;
@@ -268,7 +332,8 @@ main {
   }
 
   .gruppe-hero {
-    height: 520px;
+    height: 85svh;
+    min-height: 520px;
   }
 
   .gruppe-tekst {
@@ -317,8 +382,9 @@ html {
 
   padding: 20px 34px;
 
-  background-color: #cbf6fd5c;
-  color: white;
+  background-color: #c7dbe6;
+  color: #243e50;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 
   text-decoration: none;
 
@@ -332,9 +398,17 @@ html {
     transform 0.2s ease;
 }
 
-.quick-nav a:hover {
-  background-color: #5da0e8;
+.quick-nav a:hover,
+.quick-nav a:focus-visible {
+  background-color: #a9c5d6;
   transform: translateY(-2px);
+}
+
+.quick-nav > a,
+.quick-members > a {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -451,7 +525,7 @@ html {
 
 .fast-nav-button {
   position: fixed;
-  right: 25px;
+  right: clamp(40px, 5vw, 80px);
   top: 25px;
 
   width: 55px;
@@ -460,8 +534,9 @@ html {
   border: none;
   border-radius: 50%;
 
-  background-color: #123b66;
-  color: white;
+  background-color: #c7dbe6;
+  color: #243e50;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 
   font-size: 1.4rem;
   cursor: pointer;
@@ -469,8 +544,9 @@ html {
   z-index: 1000;
 }
 
-.fast-nav-button:hover {
-  background-color: #2f6690;
+.fast-nav-button:hover,
+.fast-nav-button:focus-visible {
+  background-color: #a9c5d6;
 }
 
 
@@ -480,7 +556,7 @@ html {
 
 .fast-nav-menu {
   position: fixed;
-  right: 25px;
+  right: clamp(40px, 5vw, 80px);
   top: 90px;
 
   display: none;
@@ -566,4 +642,3 @@ html {
 .fast-nav-submenu a:hover {
   background-color: #eef4fb;
 }
-

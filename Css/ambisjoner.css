@@ -1,7 +1,40 @@
-/* ========================================
-   VÅRE AMBISJONER – GRUNNOPPSETT OG BAKGRUNN
-======================================== */
+/* NY STIL – START
+   For å bruke gammel stil:
+   1. Kommenter ut den nye fellesstilen mellom markørene i style.css.
+   2. Kommenter ut reglene mellom NY STIL – START og NY STIL – SLUTT her.
+   3. Fjern kommentartegnene rundt GAMMEL STIL nederst i denne filen.
+   Gjør dette i både om-oss.css og ambisjoner.css for å bytte begge seksjonene.
+*/
+.ambisjon-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
 
+.ambisjon-highlight span {
+  display: block;
+  margin-bottom: 15px;
+  color: #2563eb;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ambisjon-highlight h3 {
+  margin: 0;
+  color: #172234;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .ambisjon-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+/* NY STIL – SLUTT */
+
+/* GAMMEL STIL – START (inaktiv)
 #ambisjoner {
   position: relative;
 
@@ -47,9 +80,7 @@
   border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
-/* ========================================
-   VÅRE AMBISJONER – INTRODUKSJON
-======================================== */
+
 
 .ambisjoner-intro {
   position: relative;
@@ -78,9 +109,7 @@
   line-height: 1.75;
 }
 
-/* ========================================
-   VÅRE AMBISJONER – HØYDEPUNKTER OG HOVER
-======================================== */
+
 
 .ambisjon-highlights {
   position: relative;
@@ -137,9 +166,7 @@
   font-size: 1rem;
 }
 
-/* ========================================
-   VÅRE AMBISJONER – NETTBRETT
-======================================== */
+
 
 @media (max-width: 950px) {
 .ambisjon-highlights {
@@ -148,9 +175,7 @@
 
 }
 
-/* ========================================
-   VÅRE AMBISJONER – MOBIL FOR GRUNNOPPSETT
-======================================== */
+
 
 @media (max-width: 600px) {
 #ambisjoner {
@@ -168,9 +193,7 @@
 
 }
 
-/* ========================================
-   VÅRE AMBISJONER – HELSIDES SEKSJON
-======================================== */
+
 
 #ambisjoner.kort-info {
   min-height: calc(100vh - 80px);
@@ -192,9 +215,7 @@
   box-shadow: none;
 }
 
-/* ========================================
-   VÅRE AMBISJONER – TEKSTKORT
-======================================== */
+
 
 #ambisjoner .ambisjoner-innhold {
   width: min(900px, 100%);
@@ -208,9 +229,7 @@
   box-shadow: 0 18px 45px rgba(23, 44, 74, 0.1);
 }
 
-/* ========================================
-   VÅRE AMBISJONER – OVERSKRIFT OG AVSNITT
-======================================== */
+
 
 #ambisjoner h2 {
   margin: 0 0 28px;
@@ -233,9 +252,7 @@
   margin-bottom: 0;
 }
 
-/* ========================================
-   VÅRE AMBISJONER – MOBIL FOR HELSIDES SEKSJON
-======================================== */
+
 
 @media (max-width: 700px) {
 #ambisjoner.kort-info {
@@ -259,4 +276,4 @@
   }
 
 }
-
+GAMMEL STIL – SLUTT */

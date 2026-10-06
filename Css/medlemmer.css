@@ -984,4 +984,57 @@
     z-index: 0;
   }
 }
+/* ========================================
+   MEDLEMMER – FARGESMAK
+======================================== */
 
+.horizontal-text .fargesmakJan {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color: orange;
+}
+
+.horizontal-text .fargesmakAlex {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color: rgb(255, 255, 81)
+}
+
+.horizontal-text .fargesmakBenjamin {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color: rgb(88, 88, 255);
+}
+.horizontal-text .fargesmakAisha {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color:rgb(139, 46, 73);
+}
+.horizontal-text .fargesmakTam {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color: black;
+}
+.horizontal-text .fargesmakHina {
+  display: inline;
+  margin: 0;
+  letter-spacing: normal;
+  font-size: inherit;
+  font-weight: inherit;
+  color: rgb(11, 211, 11);
+}
