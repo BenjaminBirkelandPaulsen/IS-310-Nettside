@@ -86,17 +86,20 @@
     <main>
       <section id="group-video">
   <div class="group-video">
-    
-
-  <div class="video-placeholder">
-    <p>Video kommer snart</p>
-     <div class="group-video">
-      <video controls>
-      <source src="Video/testvideo.mov" type="video/mp4">
-       Din nettleser støtter ikke video.
-      </video>
-</div>
-  </div>
+    <div class="video-player">
+      <button class="video-preview" type="button" aria-label="Spill av Gruppe 19 prosjektvideo">
+        <img src="Bilder/Bakgrunner/Gruppebilde.jpg" alt="Gruppe 19 samlet foran UiA">
+        <span class="video-play-label"><span aria-hidden="true">▶</span> Spill av video</span>
+      </button>
+      <iframe
+        class="gruppe-video"
+         data-src="https://www.youtube.com/embed/jtnClj-xMIQ"
+         hidden
+          title="Gruppe 19 prosjektvideo"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         allowfullscreen>
+      </iframe>
+    </div>
 </div>
   </section>
       <section>

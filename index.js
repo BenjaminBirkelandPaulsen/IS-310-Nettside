@@ -10,6 +10,59 @@ window.addEventListener("load", () => {
   });
 });
 
+const videoPreview = document.querySelector(".video-preview");
+const groupVideoFrame = document.querySelector(".gruppe-video[data-src]");
+
+if (videoPreview && groupVideoFrame) {
+  let videoPlayer;
+  let videoStarted = false;
+
+  const connectVideoPlayer = () => {
+    if (!videoStarted || videoPlayer || !window.YT?.Player) return;
+
+    videoPlayer = new window.YT.Player(groupVideoFrame, {
+      events: {
+        onStateChange: (event) => {
+          if (event.data !== window.YT.PlayerState.ENDED) return;
+
+          groupVideoFrame.hidden = true;
+          videoPreview.hidden = false;
+          videoPreview.focus({ preventScroll: true });
+        }
+      }
+    });
+  };
+
+  window.onYouTubeIframeAPIReady = connectVideoPlayer;
+  const youtubeApiScript = document.createElement("script");
+  youtubeApiScript.src = "https://www.youtube.com/iframe_api";
+  youtubeApiScript.async = true;
+  document.head.appendChild(youtubeApiScript);
+
+  videoPreview.addEventListener("click", () => {
+    groupVideoFrame.hidden = false;
+    videoPreview.hidden = true;
+
+    if (!videoStarted) {
+      const videoUrl = new URL(groupVideoFrame.dataset.src);
+      videoUrl.searchParams.set("autoplay", "1");
+      videoUrl.searchParams.set("playsinline", "1");
+      videoUrl.searchParams.set("enablejsapi", "1");
+      if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        videoUrl.searchParams.set("origin", window.location.origin);
+      }
+      groupVideoFrame.src = videoUrl.href;
+      videoStarted = true;
+      connectVideoPlayer();
+    } else if (videoPlayer) {
+      videoPlayer.seekTo(0, true);
+      videoPlayer.playVideo();
+    }
+
+    groupVideoFrame.focus();
+  });
+}
+
 // Karusell
 // const track = document.getElementById('teamTrack');
 
