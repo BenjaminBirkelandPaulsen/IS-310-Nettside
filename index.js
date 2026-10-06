@@ -177,17 +177,18 @@ const heroDescription = document.querySelector("#hero-description");
 
 const heroSlides = [
   {
-    eyebrow: "IS-310 Prosjektgjennomføring",
-    title: "Gruppe 19",
+    eyebrow: "IS-310 Prosjektgjennomføring - gruppe 19",
+    title: "Godt og blandet",
     description:
-      "Vi er fem studenter som samarbeider om prosjektet i IS-310."
+      "Vi er en gruppe på 6 studenter med ulike bakgrunner og erfaringer, som samarbeider i prosjektet. "
   },
 
   {
     eyebrow: "Vår ambisjon",
     title: "Vi bygger noe sammen",
     description:
-      "Vi ønsker å skape den beste mulige løsningen gjennom samarbeid, læring og våre ulike ferdigheter innen IT."
+    " Gjennom tett dialog og godt samarbeid vil vi sikre at sluttresultatet både blir noe prosjektgiver blir fornøyd med, og en løsning vi stolt kan sette navnet vårt på."
+
   }
 ];
 
